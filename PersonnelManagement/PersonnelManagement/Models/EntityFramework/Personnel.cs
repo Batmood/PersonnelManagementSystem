@@ -8,7 +8,7 @@ using FluentValidation;
 
 namespace PersonnelManagement.Models.EntityFramework
 {
-   [FluentValidation.Attributes.Validator(typeof(PersonnelValidator))]
+   //[FluentValidation.Attributes.Validator(typeof(PersonnelValidator))]
     public class Personnel
     {
         public int Id { get; set; }

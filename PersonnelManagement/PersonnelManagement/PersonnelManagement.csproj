@@ -172,10 +172,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EntityFramework\DataInitilaizer.cs" />
     <Compile Include="Models\EntityFramework\Department.cs" />
-    <Compile Include="Models\EntityFramework\DepartmentValidator.cs" />
+    <Compile Include="Models\EntityFramework\EntityFrameworkMappings\DepartmentMap.cs" />
     <Compile Include="Models\EntityFramework\Personnel.cs" />
     <Compile Include="Models\EntityFramework\PersonnelContext.cs" />
-    <Compile Include="Models\EntityFramework\PersonnelValidator.cs" />
+    <Compile Include="Models\EntityFramework\EntityFrameworkMappings\PersonnelMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +185,7 @@
     <Content Include="Views\Department\Index.cshtml" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\Department\DepartmentForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

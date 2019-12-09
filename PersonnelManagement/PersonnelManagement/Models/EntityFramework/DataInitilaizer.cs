@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace PersonnelManagement.Models.EntityFramework
 {
-    public class DataInitilaizer: DropCreateDatabaseAlways<PersonnelContext>
+    public class DataInitilaizer: DropCreateDatabaseIfModelChanges<PersonnelContext>
     {
 
     }
