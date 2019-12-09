@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<a class="btn btn-success" href="/Department/New">New Department</a>
+@Html.ActionLink("New Department", "New", null, new {@class="btn btn-primary"})
 <h2>Department List</h2>
 
     <table class="table table-bordered">

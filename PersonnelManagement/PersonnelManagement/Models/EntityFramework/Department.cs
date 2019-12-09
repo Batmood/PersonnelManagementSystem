@@ -14,7 +14,8 @@ namespace PersonnelManagement.Models.EntityFramework
             Personnels = new List<Personnel>();
         }
         public int Id { get; set; }
-        
+        [Display(Name="Department Name")]
+       // [Required(ErrorMessage ="Department Name is required")]
         public string Name { get; set; }
         public List<Personnel> Personnels { get; set; }
     }

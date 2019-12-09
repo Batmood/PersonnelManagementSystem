@@ -1,0 +1,43 @@
+﻿@model List<PersonnelManagement.Models.EntityFramework.Personnel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.ActionLink("New Personnel","New",null,new {@class="btn btn-primary" })
+<h2>Personnel List</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Department Name</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Gender</th>
+            <th>Marrital Status</th>
+            <th>Image</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var personnel in Model)
+        {
+        <tr>
+            <td>@personnel.Name</td>
+            <td>@personnel.LastName</td>
+            <td>@personnel.Department.Name</td>
+            <td>@personnel.DateOfBirth.ToString("dd-MM-yyyy")</td>
+            <td>@(DateTime.Now.Year - personnel.DateOfBirth.Year)</td>
+            <td>@personnel.Salary</td>
+            <td>@(personnel.Gender == true ? "Male" : "Female")</td>
+            <td>@(personnel.MarritalStatus == true ? "Married" : "Single")</td>
+            <td><a href="~/Content/Images/@personnel.PersonnelImagePath"></a></td>
+            <td>@Html.ActionLink("Update", "Update", new { id = personnel.Id }, new { @class = "btn btn-success" })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = personnel.Id }, new { @class = "btn btn-danger" })</td>
+        </tr>
+        }
+    </tbody>
+</table>
